@@ -24,7 +24,7 @@ class UserService {
 
     create(id, name) {
         const users = this.getUsersFromStorage();
-        if (users.findIndex(user => user.id === id)) {
+        if (users.find(user => user.id === id)) {
             return 'id alredy exist';
         } else {
         users.push({ id, name });
